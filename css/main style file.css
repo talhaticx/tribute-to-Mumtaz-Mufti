@@ -1,0 +1,162 @@
+/*
+==========================================
+   Pre CSS
+==========================================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Cormorant+Garamond&family=Playfair+Display:ital,wght@1,700&display=swap');
+:root{
+    --font-h1: 'Playfair Display', serif;
+    --font-h2: 'Cormorant Garamond', serif;
+    --font-p: 'Comfortaa', cursive;
+    --bg-color: #151414;
+    --txt : #777777;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    background-color: var(--bg-color);
+    color: var(--txt);
+}
+
+
+
+/*
+===============================================
+    Custom Scrollbar
+===============================================
+*/ 
+
+::-webkit-scrollbar {
+    width: 4px;
+} 
+::-webkit-scrollbar-track {
+    background: var(--bg-color) 
+} 
+
+::-webkit-scrollbar-thumb {
+    background: var(--txt); 
+}
+
+
+
+/*
+==========================================
+   CSS
+==========================================
+*/
+h4{
+    font-family: var(--font-h2);
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+}
+h4:hover{
+    color: white!important;
+}
+h4:after {    
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff!important;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    color: white!important;
+}
+h4:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+p{
+    font-size: 18px;
+    font-family: var(--font-p);
+}
+
+h1{
+    font-family: var(--font-h1);
+    font-size: 60px;
+    color: white;
+    text-transform: capitalize;
+}
+
+h2{
+    font-family: var(--font-h2);
+    font-size: 53px;
+}
+
+.wrapper {
+    padding-top: 66px;
+    padding-bottom: 66px;
+}
+
+#head img{
+    width: 300px;
+    height: 100%;
+    /* transition: all 0.7s ease-in-out; */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+
+.container #head{
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.text-bottom{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    font-family: var(--font-h2);
+    color: white;
+}
+
+#body-2 img{
+    width: 250px;
+    height: 100%;
+}
+#body-2{
+    align-items: center;
+}
